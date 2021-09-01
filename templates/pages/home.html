@@ -63,8 +63,11 @@
                 <div class="form-group">
                     <select class="form-control search-fields" name="select-location">
                         <option selected="true" disabled="disabled">Location</option>
-                        <option>United States</option>
-                        <option>United Kingdom</option>
+                        <option>Mumbai</option>
+                        <option>Delhi</option>
+                        <option>Bangalore</option>
+                        <option>Bhubaneshwar</option>
+                        <option>Kolkata</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -121,7 +124,7 @@
         <!-- Main title -->
         <div class="main-title">
             <h1>Featured <span>Cars</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>-</p>
         </div>
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
@@ -169,7 +172,7 @@
                             </h1>
                             <div class="location">
                                 <a href="car-details.html">
-                                    <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    <i class="flaticon-pin"></i>123 Mumbai ,
                                 </a>
                             </div>
                             <ul class="facilities-list clearfix">
@@ -227,7 +230,7 @@
                             </h1>
                             <div class="location">
                                 <a href="car-details.html">
-                                    <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    <i class="flaticon-pin"></i>123 Mumbai ,
                                 </a>
                             </div>
                             <ul class="facilities-list clearfix">
@@ -284,7 +287,7 @@
                             </h1>
                             <div class="location">
                                 <a href="car-details.html">
-                                    <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    <i class="flaticon-pin"></i>123 Delhi,
                                 </a>
                             </div>
                             <ul class="facilities-list clearfix">
@@ -341,7 +344,7 @@
                             </h1>
                             <div class="location">
                                 <a href="car-details.html">
-                                    <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    <i class="flaticon-pin"></i>123 Kolkata,
                                 </a>
                             </div>
                             <ul class="facilities-list clearfix">
@@ -398,7 +401,7 @@
                             </h1>
                             <div class="location">
                                 <a href="car-details.html">
-                                    <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    <i class="flaticon-pin"></i>123 Mumbai,
                                 </a>
                             </div>
                             <ul class="facilities-list clearfix">
@@ -455,7 +458,7 @@
                             </h1>
                             <div class="location">
                                 <a href="car-details.html">
-                                    <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    <i class="flaticon-pin"></i>123 Bangalore,
                                 </a>
                             </div>
                             <ul class="facilities-list clearfix">
@@ -489,7 +492,7 @@
         <!-- Main title -->
         <div class="main-title">
             <h1>Latest <span>Cars</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>-</p>
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-6">
@@ -543,7 +546,7 @@
                         </h1>
                         <div class="location">
                             <a href="car-details.html">
-                                <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                <i class="flaticon-pin"></i>123 Delhi,
                             </a>
                         </div>
                     </div>
@@ -608,7 +611,7 @@
                         </h1>
                         <div class="location">
                             <a href="car-details.html">
-                                <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                <i class="flaticon-pin"></i>123 Bhubaneshawar,
                             </a>
                         </div>
                     </div>
@@ -673,7 +676,7 @@
                         </h1>
                         <div class="location">
                             <a href="car-details.html">
-                                <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                <i class="flaticon-pin"></i>123 Mumbai ,
                             </a>
                         </div>
                     </div>
@@ -738,7 +741,7 @@
                         </h1>
                         <div class="location">
                             <a href="car-details.html">
-                                <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                <i class="flaticon-pin"></i>123 Mumbai ,
                             </a>
                         </div>
                     </div>
@@ -803,7 +806,7 @@
                         </h1>
                         <div class="location">
                             <a href="car-details.html">
-                                <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                <i class="flaticon-pin"></i>123 Mumbai,
                             </a>
                         </div>
                     </div>
@@ -868,7 +871,7 @@
                         </h1>
                         <div class="location">
                             <a href="car-details.html">
-                                <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                <i class="flaticon-pin"></i>123 Mumbai,
                             </a>
                         </div>
                     </div>
@@ -899,96 +902,26 @@
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
             <div class="row slick-carousel" data-slick='{"slidesToShow": 4, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+              {% for team in teams %}
                 <div class="slick-slide-item">
                     <div class="team-1">
                         <div class="photo">
                             <a href="#">
-                                <img src="img/avatar/avatar-12.jpg" alt="team-1" class="img-fluid">
+                                <img src="{{ team.photo.url }}" alt="team-1" class="img-fluid">
                             </a>
                             <div class="social-list clearfix">
-                                <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
+                                <a href="{{team.facebook_link}}"target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a>
+                                <a href="{{team.twitter_link}}"target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a>
+                                <a href="{{team.google_plus_link}}"target="_blank" class="google-bg"><i class="fa fa-google"></i></a>
                             </div>
                         </div>
                         <div class="details">
-                            <h4><a href="team-detail.html">Swaraj Bhalerao</a></h4>
-                            <h5>Manager</h5>
+                            <h4><a href="team-detail.html">{{team.first_name}} {{team.last_name}}</a></h4>
+                            <h5>{{team.designation}}</h5>
                         </div>
                     </div>
                 </div>
-                <div class="slick-slide-item">
-                    <div class="team-1">
-                        <div class="photo">
-                            <a href="#">
-                                <img src="img/avatar/avatar-9.jpg" alt="team-1" class="img-fluid">
-                            </a>
-                            <div class="social-list clearfix">
-                                <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4><a href="team-detail.html">Ronak Potha</a></h4>
-                            <h5>Support Manager</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide-item">
-                    <div class="team-1">
-                        <div class="photo">
-                            <a href="#">
-                                <img src="img/avatar/avatar-11.jpg" alt="team-1" class="img-fluid">
-                            </a>
-                            <div class="social-list clearfix">
-                                <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4><a href="team-detail.html">Abhishek Walvekar</a></h4>
-                            <h5>Creative Director</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide-item">
-                    <div class="team-1">
-                        <div class="photo">
-                            <a href="#">
-                                <img src="img/avatar/avatar-10.jpg" alt="team-1" class="img-fluid">
-                            </a>
-                            <div class="social-list clearfix">
-                                <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4><a href="team-detail.html">Ruturaj Patade</a></h4>
-                            <h5>Web Developer</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide-item">
-                    <div class="team-1">
-                        <div class="photo">
-                            <a href="#">
-                                <img src="img/avatar/avatar-11.jpg" alt="team-1" class="img-fluid">
-                            </a>
-                            <div class="social-list clearfix">
-                                <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4><a href="team-detail.html">Abhishek Walvekar</a></h4>
-                            <h5>Creative Director</h5>
-                        </div>
-                    </div>
-                </div>
+              {% endfor %}
             </div>
         </div>
     </div>
@@ -1024,7 +957,7 @@
                 <div class="modal-header">
                     <div class="modal-title" id="carOverviewModalLabel">
                         <h4>Explore Your Dream Car</h4>
-                        <h5><i class="flaticon-pin"></i> 123 Kathal St. Tampa City,</h5>
+                        <h5><i class="flaticon-pin"></i> 123 Mumbai ,</h5>
                     </div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
