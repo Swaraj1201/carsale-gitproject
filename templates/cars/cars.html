@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title %} | Car Inventory {% endblock %}
+
 {% block content %}'
 
 {% load humanize %}
@@ -34,15 +36,15 @@
                                     <div class="price-box">
                                         <span>₹ {{car.price | intcomma }}</span>
                                     </div>
-                                    <img class="d-block w-100" src="{{car.car_photo.url}}" alt="car">
+                                    <img class="d-block w-100" src="{{car.car_photo.url}}" alt="car" style="min-height:262px; max-height:262px;">
                                 </a>
                                 <div class="carbox-overlap-wrapper">
                                     <div class="overlap-box">
                                         <div class="overlap-btns-area">
                                             <div class="car-magnify-gallery">
-                                                <a href="{{car.car_photo.url}} class="overlap-btn">
+                                                <a href="{{car.car_photo.url}}" class="overlap-btn">
                                                     <i class="fa fa-expand"></i>
-                                                    <img class="hidden" src="img/car/car-1.jpg">
+                                                    <img class="hidden" src="{{car.car_photo.url}}" >
                                                 </a>
                                                 {% if car.car_photo_1 %}
                                                 <a href="{{car.car_photo_1.url}} " class="hidden" >
