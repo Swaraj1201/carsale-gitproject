@@ -2,6 +2,8 @@ from django.contrib import messages, auth
 from django.shortcuts import redirect, render
 from . import views
 from django.contrib.auth.models import User
+from contacts.models import Contact
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def login(request):
@@ -38,26 +40,31 @@ def register(request):
                     messages.error(request,'Email laready exists')
                     return redirect('register')
                 else:
-                    user = User.objects.create_user(first_name=firstname,last_name=lastname,email=email,username=username,password=password)  
+                    user = User.objects.create_user(first_name=firstname,last_name=lastname,email=email,username=username,password=password)
                     auth.login(request,user)
                     messages.success(request,'You are now logged in.')
                     return redirect('dashboard')
                     user.save()
                     messages.success(request,'You are registered successfully')
-                    return redirect('login')     
+                    return redirect('login')
 
         else:
-            messages.error(request, 'Passwords do not match!')    
+            messages.error(request, 'Passwords do not match!')
             return redirect('register')
-    else:    
+    else:
         return render(request , 'accounts/register.html')
 
+@login_required(login_url = 'login')
 def dashboard(request):
-    return render(request , 'accounts/dashboard.html')
+    user_inquiry = Contact.objects.order_by('-create-date').filter(user_id=request.user.id)
+    data = {
+        'inquiries': user_inquiry,
+    }
+    return render(request , 'accounts/dashboard.html', data)
 
 def logout(request):
     if request.method == 'POST':
         auth.logout(request)
-        messages.success(request,'You are successfully logged out.')
+
         return redirect('home')
-    return redirect('home')     
+    return redirect('home')
